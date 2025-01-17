@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Registration {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 
 	public Registration(WebDriver driver) {
 
@@ -16,7 +16,7 @@ public class Registration {
 	}
 
 	@FindBy(xpath = "//a[normalize-space()='Register']")
-	WebElement regsitrationLink;
+	WebElement registrationLink;
 
 	@FindBy(css = "input[id='customer.firstName']")
 	WebElement firstName;
@@ -55,11 +55,15 @@ public class Registration {
 	WebElement registerButton;
 
 	@FindBy(xpath = "//p[contains(text(),'Your account was created successfully. You are now')]")
-	WebElement confrimationText;
+	WebElement confirmationText;
 
+	public void launchApplication(){
+
+		driver.get("");
+	}
 	public void clickRegistration() {
 
-		regsitrationLink.click();
+		registrationLink.click();
 	}
 
 	public void enterFirstname() {
@@ -124,7 +128,7 @@ public class Registration {
 
 	public void getText() {
 
-		String text = confrimationText.getText();
+		String text = confirmationText.getText();
 		System.out.println("this method is passed");
 	}
 }

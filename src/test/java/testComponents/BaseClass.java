@@ -16,7 +16,7 @@ import pageFactory.Registration;
 
 public class BaseClass {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 
 	public WebDriver initializeDriver() throws IOException {
 
@@ -49,12 +49,12 @@ public class BaseClass {
 		return driver;
 	}
 
-	@BeforeTest(alwaysRun = true)
-	public void launchApplication() throws IOException {
-
-		driver = initializeDriver();
-		Registration reg = new Registration(driver);
-	}
+//	@BeforeTest(alwaysRun = true)
+//	public void launchApplication() throws IOException {
+//
+//		driver = initializeDriver();
+//		Registration reg = new Registration(driver);
+//	}
 
 	public void tearDown() {
 

@@ -6,9 +6,9 @@ Feature: Title of your feature
   @registration
   Scenario: User can register by clicking Register link
     Given user is on the home page
-    When user click on "regiser" link
+    When user click on "register" link
     And user enter "first name " and " last name"
-    And user etner address and city
+    And user enter address and city
     And user enter state and zipCode
     And user enter phone number and SSN
     And now user should create username
