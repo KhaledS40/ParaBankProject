@@ -9,20 +9,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pageFactory.Registration;
 
 public class BaseClass {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	public WebDriver initializeDriver() throws IOException {
 
 		Properties prop = new Properties();
 
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir"));
+		FileInputStream file = new FileInputStream(
+				"C:\\Users\\Khaled\\IdeaProjects\\ParaBankCucumber\\src\\main\\java\\resources\\config.properties");
 		prop.load(file);
 		String browsername = prop.getProperty("browser");
 

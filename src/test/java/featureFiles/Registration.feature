@@ -15,6 +15,7 @@ Feature: Title of your feature
     And user also should create password and confirm password
     Then user can click "Register" link to register ot the site 
     And a confirmation message should be created "Your account was created successfully."
+    And finally browser should be closed
 
   #@tag2
   #Scenario Outline: Title of your scenario outline

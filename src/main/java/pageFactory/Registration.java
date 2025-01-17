@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Registration {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	public Registration(WebDriver driver) {
 
@@ -51,16 +51,13 @@ public class Registration {
 	@FindBy(css = "#repeatedPassword")
 	WebElement confirmPassword;
 
-	@FindBy(css = "input[value='Register']")
+	@FindBy(xpath = "//input[@value='Register']")
 	WebElement registerButton;
 
 	@FindBy(xpath = "//p[contains(text(),'Your account was created successfully. You are now')]")
 	WebElement confirmationText;
 
-	public void launchApplication(){
 
-		driver.get("");
-	}
 	public void clickRegistration() {
 
 		registrationLink.click();
@@ -68,7 +65,7 @@ public class Registration {
 
 	public void enterFirstname() {
 
-		firstName.sendKeys("Bob");
+		firstName.sendKeys("Bob1");
 	}
 
 	public void enterLastname() {
@@ -78,7 +75,7 @@ public class Registration {
 
 	public void enterAddress() {
 
-		address.sendKeys("123 King Street");
+		address.sendKeys("124 King Street");
 	}
 
 	public void enterCity() {
@@ -98,37 +95,37 @@ public class Registration {
 
 	public void enterPhone() {
 
-		phoneNumber.sendKeys("202 345 5678");
+		phoneNumber.sendKeys("202 345 5679");
 	}
 
 	public void enterSSN() {
 
-		socialNumber.sendKeys("456567890");
+		socialNumber.sendKeys("456567880");
 	}
 
 	public void enterUsername() {
 
-		userName.sendKeys("Bob_John");
+		userName.sendKeys("Bob.John");
 	}
 
 	public void enterPassword() {
 
-		password.sendKeys("Cheers123");
+		password.sendKeys("Cheers1234");
 	}
 
 	public void enterConfirmPassword() {
 
-		confirmPassword.sendKeys("Cheers123");
+		confirmPassword.sendKeys("Cheers1234");
 	}
 
 	public void clickRegisterButton() {
 
-		registerButton.clear();
+		registerButton.click();
 	}
 
 	public void getText() {
 
 		String text = confirmationText.getText();
-		System.out.println("this method is passed");
+		System.out.println("this method is passed" + text);
 	}
 }
