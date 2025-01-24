@@ -1,0 +1,1 @@
+Feature: User can login to the application with valid credentials
